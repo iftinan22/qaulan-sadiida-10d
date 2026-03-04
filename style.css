@@ -1,0 +1,424 @@
+body {
+    background-color:#f6efe6; 
+    font-family: Arial, sans-serif;
+    color: #3e2723;
+    margin: 20px;
+     }
+
+
+h1 {
+    color: #3e2723;
+    text-align: center;
+    font-family: 'Georgia', serif;
+   }
+
+h2 {
+    color:  #3e2723;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+   }
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+.daftar-produk {
+               display: grid;
+               grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+               gap: 24px;
+               padding: 20px;
+               }
+
+
+.produk {
+        background-color: #ffffff;
+        border: 1px solid #e0d7cf;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+
+.produk img {
+    width: 180px;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: transform 0.4s ease;
+}
+.produk:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.produk:hover img {
+    transform: scale(1.05);
+}
+
+
+.produk h2 {
+    font-size: 20px;
+    color: #3e2723;
+}
+
+.produk h3 {
+    font-size: 16px;
+    color:  #3e2723;
+}
+
+
+.harga {
+    font-weight: bold;
+    color: #2e7d32; 
+    
+}
+
+
+.deskripsi {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.artikel {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    font-family: Georgia, serif;
+  
+    line-height: 1.8;
+}
+
+.artikel .penulis {
+    font-style: italic;
+    color: #8d6e63;
+    margin-bottom: 20px;
+}
+
+.artikel .sampul {
+    width: 180px;
+    float: right;
+    margin: 0 0 20px 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.artikel blockquote {
+    font-style: italic;
+    padding: 16px;
+    margin: 20px 0;
+    border-left: 4px solid #6d4c41;
+    color: #5A4A2F;
+    background-color: #f3ede7;
+}
+
+
+
+.btn-kembali {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #6d4c41, #8d6e63);
+    color: #fffaf5;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 6px 18px rgba(93, 64, 55, 0.4);
+    transition: 
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+/* EFEK MAJU + CAHAYA */
+.btn-kembali:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 
+        0 12px 30px rgba(93, 64, 55, 0.55),
+        0 0 18px rgba(255, 224, 178, 0.8);
+}
+
+/* KILAU BERJALAN (KESAN MAU DIKETIK) */
+.btn-kembali::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.btn-kembali:hover::after {
+    left: 100%;
+}
+
+/* SAAT DIKLIK */
+.btn-kembali:active {
+    transform: scale(0.96);
+    box-shadow: 0 6px 14px rgba(93, 64, 55, 0.35);
+}
+
+.formulir{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f3e5ab9c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label{ 
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+   color: #5d4037; 
+}
+
+form input,
+form select,
+form textarea{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #967146c9;
+    
+}
+
+form button{
+    background-color:#5d4037;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color:#4e342e;
+}
+
+
+nav {
+    background: linear-gradient(90deg, #FFF8E1, #F3E5AB);
+    padding: 18px 24px;
+    border-radius: 22px;
+    margin-bottom: 35px;
+    text-align: center;
+
+    box-shadow: 0 8px 22px rgba(93, 64, 55, 0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+nav:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(93, 64, 55, 0.35);
+}
+nav a {
+    position: relative;
+    color: #5A4A2F;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 6px;
+
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6d4c41, #a1887f);
+    border-radius: 6px;
+    transition: width 0.35s ease;
+}
+nav a:hover {
+    color: #6d4c41;
+    transform: translateY(-3px);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+nav a:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* TESTIMONI BOX - Glassmorphism */
+.testimoni-box {
+  background-color:#4e342e;
+  color: #fdfcfb; /* PUTIH HANGAT, ENAK DIBACA */
+  padding: 26px 30px;
+  margin: 24px auto;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  line-height: 1.8;
+
+  width: 70%;
+  max-width: 900px;
+}
+
+.kontak-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.kontak-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b3e26;
+}
+
+.kontak-box {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.alamat, .form-kontak {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.alamat h3,
+.form-kontak h3 {
+    margin-bottom: 15px;
+    color: #6b3e26;
+}
+
+/* FORM */
+form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d6c2b5;
+    border-radius: 6px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #6b3e26;
+}
+
+/* BUTTON */
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    background-color: #6b3e26;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #4b2e2e; /* coklat lebih gelap */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #6b3e26;
+    color: white;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .kontak-box {
+        flex-direction: column;
+    }
+}
+
+.event-container {
+    padding: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.event-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b3e26;
+}
+
+.event-list {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    color: #6b3e26;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin-bottom: 8px;
+}
+
+.event-card button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #6b3e26;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.event-card button:hover {
+    background-color: #4b2e2e;
+}
